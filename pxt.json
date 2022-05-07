@@ -11,7 +11,9 @@
         "main.ts",
         "README.md",
         "i2c.ts",
-        "datalog.ts"
+        "datalog.ts",
+        "response.ts",
+        "action.ts"
     ],
     "testFiles": [
         "test.ts"

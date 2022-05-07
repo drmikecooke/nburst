@@ -1,6 +1,6 @@
 /**
-* Log access
-*/
+ * Log access
+ */
 class Datalog {
     buffer: Buffer;
     end: number;
@@ -22,8 +22,8 @@ class Datalog {
 //% weight=100 color=#0fbc11 icon="✎"
 namespace datalog {
     /**
- * Create datalog
- */
+     * Create datalog
+     */
     //% block
     export function createDatalog(size: number): Datalog {
         return new Datalog(size)
