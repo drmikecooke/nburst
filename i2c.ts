@@ -21,17 +21,6 @@ namespace I2C {
         buffer[1] = value
         pins.i2cWriteBuffer(addr, buffer.slice(0,2), false);
     }
-    function codes(d: Device): number[] {
-        switch (d) {
-            case Device.BME: [
-                46816,
-                2034,
-                47092,
-                37109
-            ];
-            case Device.TCS: return [896, 11137]
-        }
-    }
     function dataregister(d: Device): number {
         switch (d) {
             case Device.BME: return 247;
@@ -40,7 +29,7 @@ namespace I2C {
     }
     /**
      * 
-     * Initialize I2C device
+     * Initialize I2C devices
      */
     //% block
     export function init():void {
