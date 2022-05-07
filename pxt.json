@@ -10,7 +10,8 @@
         "main.blocks",
         "main.ts",
         "README.md",
-        "i2c.ts"
+        "i2c.ts",
+        "datalog.ts"
     ],
     "testFiles": [
         "test.ts"
