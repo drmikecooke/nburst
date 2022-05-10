@@ -17,7 +17,7 @@ namespace response {
     * Parse request
     */
     //% block
-    export function parseSend(rbuf: Buffer): Buffer {
+    export function buf(rbuf: Buffer): Buffer {
         let c = String.fromCharCode(rbuf.getUint8(0))
         switch (c) {
             case "T":
@@ -34,15 +34,15 @@ namespace response {
                 let readLength = rbuf.getUint8(3)
                 return dlog.buffer.slice(readOffset, readLength);
             default:
-                end = 0
-                return null;
+                set32(0)
+                return buffer.slice(0, 4);
         }
     }
     /**
     * Radio response
     */
     //% block
-    export function radioResponse(rbuf: Buffer): void{
-        radio.sendBuffer(parseSend(rbuf))
+    export function rtx(rbuf: Buffer): void{
+        radio.sendBuffer(buf(rbuf))
     }
 }
