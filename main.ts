@@ -6,7 +6,7 @@ serial.onDataReceived("BTRN", function () {
 })
 basic.showIcon(IconNames.Heart)
 radio.setGroup(6)
-let days = 4
+let days = 7
 let size = days * 384
 I2C.init()
 let dlog = datalog.createDatalog(size)
